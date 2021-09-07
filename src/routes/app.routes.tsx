@@ -2,11 +2,17 @@ import React from 'react'
 import { Platform } from 'react-native'
 
 import { useTheme } from 'styled-components'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs'
 import { MaterialIcons } from '@expo/vector-icons'
 
 import { Dashboard } from '../screens/Dashboard'
 import { Register } from '../screens/Register'
+
+type RootTabParamList = {
+  Listagem: undefined
+}
+
+export type DashboardScreenNavigationProp = BottomTabNavigationProp<RootTabParamList, 'Listagem'>
 
 const { Navigator, Screen } = createBottomTabNavigator()
 

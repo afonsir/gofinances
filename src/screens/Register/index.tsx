@@ -15,6 +15,8 @@ import uuid from 'react-native-uuid'
 import { useForm } from 'react-hook-form'
 import { useNavigation } from '@react-navigation/native'
 
+import { DashboardScreenNavigationProp } from '../../routes/app.routes'
+
 import { InputForm } from '../../components/Form/InputForm'
 import { Button } from '../../components/Form/Button'
 import { TransactionTypeButton } from '../../components/Form/TransactionTypeButton'
@@ -56,7 +58,7 @@ export function Register() {
     name: 'Categoria'
   })
 
-  const navigation = useNavigation()
+  const navigation = useNavigation<DashboardScreenNavigationProp>()
 
   const {
     control,
