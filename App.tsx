@@ -32,12 +32,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar
-        backgroundColor={theme.colors.primary}
-        barStyle="light-content"
-      />
-
       <NavigationContainer>
+        <StatusBar
+          backgroundColor={theme.colors.primary}
+          barStyle="light-content"
+        />
         <AppRoutes />
       </NavigationContainer>
     </ThemeProvider>
